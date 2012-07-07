@@ -1,4 +1,12 @@
 RedirectApp::Application.routes.draw do
+
+  resources :redirect do
+    collection do
+      get 'process'
+      post 'process'
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
