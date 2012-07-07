@@ -2,8 +2,8 @@ RedirectApp::Application.routes.draw do
 
   resources :redirect do
     collection do
-      get 'process'
-      post 'process'
+      get 'work'
+      post 'work'
     end
   end
 

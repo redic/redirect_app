@@ -3,7 +3,7 @@ class RedirectController < ApplicationController
   # GET /redirect.json
   # POST /redirect
   # POST /redirect.json
-  def process
+  def work
 
   	@type = params[:type]
 
