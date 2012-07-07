@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class RedirectController < ApplicationController
   # GET /redirect
   # GET /redirect.json
@@ -5,12 +7,18 @@ class RedirectController < ApplicationController
   # POST /redirect.json
   def work
 
-  	@type = params[:type]
+  	type = params[:type]
 
-  	respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @type }
-    end
+  	case type
+  	when "Рекламное агентство"
+  		redirect_to "http://welcome.eagleplatform.com/ra/"
+  	when "Спортивная организация"
+  		redirect_to "http://welcome.eagleplatform.com/sport/"
+  	when "СМИ"
+  		redirect_to "http://welcome.eagleplatform.com/mm/"
+  	else
+		redirect_to "http://welcome.eagleplatform.com/all/"
+	end
 
   end
 end
