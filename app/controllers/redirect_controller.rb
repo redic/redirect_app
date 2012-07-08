@@ -8,16 +8,17 @@ class RedirectController < ApplicationController
   def work
 
   	type = params[:type]
+  	invite = params[:invite]
 
   	case type
   	when "Рекламное агентство"
-  		redirect_to "http://welcome.eagleplatform.com/ra/"
+  		redirect_to "http://welcome.eagleplatform.com/ra/?invite=#{invite}"
   	when "Спортивная организация"
-  		redirect_to "http://welcome.eagleplatform.com/sport/"
+  		redirect_to "http://welcome.eagleplatform.com/sport/?invite=#{invite}"
   	when "СМИ"
-  		redirect_to "http://welcome.eagleplatform.com/mm/"
+  		redirect_to "http://welcome.eagleplatform.com/mm/?invite=#{invite}"
   	else
-		redirect_to "http://welcome.eagleplatform.com/all/"
+		redirect_to "http://welcome.eagleplatform.com/all/?invite=#{invite}"
 	end
 
   end
